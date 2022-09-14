@@ -1,0 +1,15 @@
+<ul ngbNav [(activeId)]="activeId" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink routerLink="/">Home</a>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink routerLink="/protected">Protected</a>
+  </li>
+<li>
+  Hello, {{user.name}}
+</li>
+  <li *ngIf="isAuthenticated" [ngbNavItem]="3">
+    <a  ngbNavLink (click)="logout()">Logout</a>
+  </li>
+
+</ul>
